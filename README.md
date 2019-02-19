@@ -4,5 +4,5 @@ I built this with the gatsby blog starter (https://github.com/gatsbyjs/gatsby-st
 
 This is a list of modifications I made or features I added:
   * redesign of the layout and styles
-  * tags for posts
+  * tag functionality for posts
   * night mode
