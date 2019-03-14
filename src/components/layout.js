@@ -12,21 +12,27 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <div>
-          <ul className={styles.list_container}>
-            <li className={styles.list_element}>
-              <Link className = {styles.link} to={`/`}>go somewhere</Link>
-              <Link className = {styles.link} to={`/`}>go somewhere</Link>
-            </li>
-            <li className={styles.list_element}>
-              <Link className = {styles.link} to={`/`}>go somewhere</Link>
-            </li>
-            <li className={styles.list_element}>
-              <Link className = {styles.link} to={`/`}>go somewhere</Link>
-            </li>
-          </ul>
-        </div>
-
+        <nav className={styles.nav}>
+          <div className={styles.logo}>
+            <span className={styles.logoFont}>Michael Grotton</span>
+          </div>
+          <div className={styles.hamburger}>
+            <button className={styles.hamburgerButton}>
+              <svg className={styles.hamburgerSvg} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
+          </div>
+          <div className={styles.linkCont}>
+            <div className={styles.links}>
+              <Link className = {styles.pill} to={`/`}>go somewhere</Link>
+                Examples
+              <Link className = {styles.pill} to={`/`}>go somewhere</Link>
+              <Link className = {styles.pill} to={`/`}>go somewhere</Link>
+            </div>
+            <div>
+              <Link className = {styles.pill} to={`/`}>go somewhere</Link>
+            </div>
+          </div>
+        </nav>
       )
     } else {
       header = (
