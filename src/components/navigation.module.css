@@ -3,45 +3,35 @@
 @tailwind utilities;
 
 .nav {
-  @apply flex items-center justify-between bg-white flex-wrap p-6 pin-y z-10 h-16 fixed w-full;
+  @apply flex bg-white pin-y z-10 fixed w-full;
+  height:4.5rem;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
 }
 
 .nav-scrolled {
-  @apply flex items-center justify-between bg-white flex-wrap p-6 shadow border-t-8 z-10 pin-y fixed h-16 w-full border-0 border-b-2 border-grey-dark;
-  border-bottom:3px solid whitesmoke;
+  @apply flex shadow bg-white pin-y z-10 h-16 fixed w-full border-0 border-b-2 border-grey-dark;
+  border-bottom:2px solid whitesmoke;
+  -webkit-transition: height .1s linear;
+  -moz-transition: height .1s linear;
+  -o-transition: height .1s linear;
+  transition: height .1s linear;
 
 }
 
 .logo {
-  @apply flex items-center flex-no-shrink text-white mr-6 font-sans tracking-wide;
+  @apply flex items-center flex-no-shrink text-white mr-6 font-sans tracking-wide inline-block;
 }
 
 .logo-font {
   @apply font-semibold text-xl tracking-tight text-black font-sans tracking-wide;
-}
-
-.hamburger {
-  @apply block;
-}
-
-.hamburger:lg {
-  @apply hidden;
-}
-
-.hamburger-button {
-  @apply flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light;
-}
-
-.hamburger-svg {
-  @apply fill-current h-3 w-3;
-}
-
-.hamburger-button:hover {
-  @apply text-white border-white;
+  line-height:4rem;
 }
 
 .link-cont {
-  @apply w-full block flex-grow;
+  @apply w-full inline-block flex;
 }
 
 .link-cont:lg {

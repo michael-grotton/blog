@@ -28,26 +28,19 @@ class Navigation extends React.Component {
 
   render() {
     return (
-      <nav className={this.state.scrolled ? styles.navScrolled : styles.nav}>
+      <div className={this.state.scrolled ? styles.navScrolled : styles.nav}>
         <div className={styles.logo}>
           <span className={styles.logoFont}>Michael Grotton</span>
         </div>
-        <div className={styles.hamburger}>
-          <button className={styles.hamburgerButton}>
-            <svg className={styles.hamburgerSvg} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-          </button>
-        </div>
-        <div className={styles.linkCont}>
-          <div className={styles.links}>
+        <div className={styles.linkCont} style={{backgroundColor:"yellow"}}>
             <Link className = {styles.pill} to={`/`}>Posts</Link>
             <Link className = {styles.pill} to={`/`}>Projects</Link>
             <Link className = {styles.pill} to={`/`}>Something</Link>
-          </div>
-          <div>
-            <Link className = {styles.pill} to={`/`}>Share</Link>
-          </div>
         </div>
-      </nav>
+        <div>
+          <Link className = {styles.pill} to={`/`}>Share</Link>
+        </div>
+      </div>
     )
   }
 }
