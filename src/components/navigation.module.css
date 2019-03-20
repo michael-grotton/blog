@@ -2,56 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav {
-  @apply flex bg-white pin-y z-10 fixed w-full;
+.nav-cont {
+  @apply bg-white pin-y z-10 fixed w-full;
   height:4.5rem;
-  -webkit-transition: all .1s linear;
-  -moz-transition: all .1s linear;
-  -o-transition: all .1s linear;
-  transition: all .1s linear;
-}
-
-.nav-scrolled {
-  @apply flex shadow bg-white pin-y z-10 h-16 fixed w-full border-0 border-b-2 border-grey-dark;
-  border-bottom:2px solid whitesmoke;
   -webkit-transition: height .1s linear;
   -moz-transition: height .1s linear;
   -o-transition: height .1s linear;
   transition: height .1s linear;
+}
+
+.nav-cont-scrolled {
+  @apply bg-white pin-y z-10 h-16 fixed w-full;
+  -webkit-transition: height .1s linear;
+  -moz-transition: height .1s linear;
+  -o-transition: height .1s linear;
+  transition: height .1s linear;
+  border-bottom: 2px solid #f0f0f0;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.03);
+  opacity:.95;
 
 }
 
-.logo {
-  @apply flex items-center flex-no-shrink text-white mr-6 font-sans tracking-wide inline-block;
+.nav-items {
+  @apply flex justify-between items-center;
 }
 
 .logo-font {
-  @apply font-semibold text-xl tracking-tight text-black font-sans tracking-wide;
-  line-height:4rem;
+  @apply font-semibold text-2xl tracking-tight text-black font-sans ml-2;
+  line-height:4.4rem;
+  letter-spacing:.5px;
+  -webkit-transition: line-height .1s linear;
+  -moz-transition: line-height .1s linear;
+  -o-transition: line-height .1s linear;
+  transition: line-height .1s linear;
 }
 
-.link-cont {
-  @apply w-full inline-block flex;
-}
-
-.link-cont:lg {
-  @apply flex w-auto items-center;
-}
-
-.links {
-  @apply text-sm;
-}
-
-.links:lg {
-  @apply flex-grow;
+.logo-font-scrolled {
+  @apply font-semibold text-2xl tracking-tight text-black font-sans ml-2;
+  line-height:3.9rem;
+  letter-spacing:.5px;
+  -webkit-transition: line-height .1s linear;
+  -moz-transition: line-height .1s linear;
+  -o-transition: line-height .1s linear;
+  transition: line-height .1s linear;
 }
 
 .pill {
-  @apply inline-block border border-white rounded text-blue py-1 px-3;
+  @apply mr-2 align-bottom inline-block text-grey-dark font-sans rounded px-3;
   box-shadow: none;
   text-decoration: none;
+  line-height:3.4rem;
+  -webkit-transition: line-height .1s linear;
+  -moz-transition: line-height .1s linear;
+  -o-transition: line-height .1s linear;
+  transition: line-height .1s linear;
 }
 
-.pill:hover {
-  @apply border-grey-lighter bg-grey-lighter;
+.connect {
+  @apply mr-2 align-bottom inline-block font-sans text-black rounded px-3;
+  box-shadow: none;
+  text-decoration: none;
+  line-height:3.4rem;
+  border: 2px solid gold;
+  background-color:#fff9d6;
+  -webkit-transition: line-height .1s linear;
+  -moz-transition: line-height .1s linear;
+  -o-transition: line-height .1s linear;
+  transition: line-height .1s linear;
+}
+
+.connect-scrolled {
+  @apply mr-2 align-bottom inline-block text-black font-sans rounded px-3;
+  box-shadow: none;
+  text-decoration: none;
+  line-height:3rem;
+  border: 2px solid gold;
+  background-color:#fff9d6;
+  -webkit-transition: line-height .1s linear;
+  -moz-transition: line-height .1s linear;
+  -o-transition: line-height .1s linear;
+  transition: line-height .1s linear;
+}
+
+.pill-scrolled {
+  @apply mr-2 align-bottom inline-block text-grey-dark font-sans rounded px-3;
+  box-shadow: none;
+  text-decoration: none;
+  line-height:3rem;
+  -webkit-transition: line-height .1s linear;
+  -moz-transition: line-height .1s linear;
+  -o-transition: line-height .1s linear;
+  transition: line-height .1s linear;
+}
+
+.pill:hover, .pill-scrolled:hover {
+  @apply text-black font-sans bg-grey-lighter;
+}
+
+.connect:hover, .connect-scrolled:hover {
+  @apply font-sans;
+  background-color:#ffee90;
 }

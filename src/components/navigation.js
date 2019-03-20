@@ -28,17 +28,23 @@ class Navigation extends React.Component {
 
   render() {
     return (
-      <div className={this.state.scrolled ? styles.navScrolled : styles.nav}>
-        <div className={styles.logo}>
-          <span className={styles.logoFont}>Michael Grotton</span>
-        </div>
-        <div className={styles.linkCont} style={{backgroundColor:"yellow"}}>
-            <Link className = {styles.pill} to={`/`}>Posts</Link>
-            <Link className = {styles.pill} to={`/`}>Projects</Link>
-            <Link className = {styles.pill} to={`/`}>Something</Link>
-        </div>
-        <div>
-          <Link className = {styles.pill} to={`/`}>Share</Link>
+      <div className={this.state.scrolled ? styles.navContScrolled : styles.navCont}>
+        <div className={styles.navItems} style={{
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(30),
+        }}>
+          <div>
+            <span className={this.state.scrolled ? styles.logoFontScrolled : styles.logoFont}>Michael Grotton</span>
+          </div>
+          <div>
+              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/`}>Articles</Link>
+              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/`}>Projects</Link>
+              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/`}>About Me</Link>
+          </div>
+          <div>
+            <Link className = {this.state.scrolled ? styles.connectScrolled : styles.connect} to={`/`}>Get in touch</Link>
+          </div>
         </div>
       </div>
     )

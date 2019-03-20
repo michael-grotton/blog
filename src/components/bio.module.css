@@ -1,0 +1,7 @@
+@tailwind preflight
+@tailwind components;
+@tailwind utilities;
+
+.greeting {
+  @apply font-sans font-light leading-normal;
+}
