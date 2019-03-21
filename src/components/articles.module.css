@@ -1,0 +1,28 @@
+@tailwind preflight
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply text-black font-sans font-light;
+  text-align:center;
+}
+
+.title {
+  @apply text-black font-sans font-light;
+  margin-top:0;
+}
+
+.post {
+  @apply rounded p-5;
+  border:2px solid whitesmoke;
+  margin-top:15px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.post:hover {
+  background-color:whitesmoke;
+}
+
+.text {
+  @apply m-0 p-0;
+}
