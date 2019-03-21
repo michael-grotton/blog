@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .nav-cont {
-  @apply bg-white pin-y z-10 fixed w-full;
+  @apply bg-white pin-y fixed w-full;
   height:4.5rem;
   -webkit-transition: height .1s linear;
   -moz-transition: height .1s linear;
@@ -12,15 +12,13 @@
 }
 
 .nav-cont-scrolled {
-  @apply bg-white pin-y z-10 h-16 fixed w-full;
+  @apply bg-white pin-y h-16 fixed w-full;
   -webkit-transition: height .1s linear;
   -moz-transition: height .1s linear;
   -o-transition: height .1s linear;
   transition: height .1s linear;
   border-bottom: 2px solid #f0f0f0;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.03);
-  opacity:.95;
-
 }
 
 .nav-items {
@@ -59,7 +57,7 @@
 }
 
 .connect {
-  @apply mr-2 align-bottom inline-block font-sans text-black rounded px-3;
+  @apply mr-2 align-bottom inline-block font-medium font-sans text-black rounded px-3;
   box-shadow: none;
   text-decoration: none;
   line-height:3.4rem;
@@ -72,7 +70,7 @@
 }
 
 .connect-scrolled {
-  @apply mr-2 align-bottom inline-block text-black font-sans rounded px-3;
+  @apply mr-2 align-bottom inline-block font-medium text-black font-sans rounded px-3;
   box-shadow: none;
   text-decoration: none;
   line-height:3rem;

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from "./navigation.module.css"
-
+import Image from "gatsby-image"
 import { rhythm } from "../utils/typography"
 
 class Navigation extends React.Component {
@@ -32,7 +32,7 @@ class Navigation extends React.Component {
         <div className={styles.navItems} style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(30),
+          maxWidth: rhythm(29),
         }}>
           <div>
             <span className={this.state.scrolled ? styles.logoFontScrolled : styles.logoFont}>Michael Grotton</span>
@@ -44,6 +44,7 @@ class Navigation extends React.Component {
           </div>
           <div>
             <Link className = {this.state.scrolled ? styles.connectScrolled : styles.connect} to={`/`}>Get in touch</Link>
+
           </div>
         </div>
       </div>

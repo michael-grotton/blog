@@ -1,0 +1,7 @@
+@tailwind preflight
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply text-black font-sans font-light;
+}
