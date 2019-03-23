@@ -32,7 +32,7 @@ function Articles() {
 
                 </div>
               </Link>
-            
+
               )
             })}
           </div>
