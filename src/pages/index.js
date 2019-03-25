@@ -2,12 +2,13 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Articles from "../components/articles"
+import Projects from "../components/projects"
+import RecentArticles from "../components/recentarticles"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
-class BlogIndex        extends React.Component {
+class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -19,7 +20,8 @@ class BlogIndex        extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
-        <Articles />
+        <RecentArticles />
+        <Projects />
       </Layout>
     )
   }

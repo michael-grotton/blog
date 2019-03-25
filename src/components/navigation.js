@@ -35,15 +35,17 @@ class Navigation extends React.Component {
           maxWidth: rhythm(29),
         }}>
           <div>
-            <span className={this.state.scrolled ? styles.logoFontScrolled : styles.logoFont}>Michael Grotton</span>
+            <Link to={'/'} style={{boxShadow:"none",textDecoration:"none"}}>
+              <span className={this.state.scrolled ? styles.logoFontScrolled : styles.logoFont}>Michael Grotton</span>
+            </Link>
           </div>
           <div>
-              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/`}>Articles</Link>
-              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/`}>Projects</Link>
-              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/`}>About Me</Link>
+              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/articles`}>Articles</Link>
+              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/projects`}>Projects</Link>
+              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/about`}>About Me</Link>
           </div>
           <div>
-            <Link className = {this.state.scrolled ? styles.connectScrolled : styles.connect} to={`/`}>Get in touch</Link>
+            <Link className = {this.state.scrolled ? styles.connectScrolled : styles.connect} to={`/connect`}>Get in touch</Link>
 
           </div>
         </div>
