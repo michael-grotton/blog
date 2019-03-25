@@ -36,11 +36,11 @@ const Tags = ({ pageContext, data }) => {
                     </h3>
                     <small>{node.frontmatter.date}</small>
                     <div className={styles.tags}>
-                    {tags.map((tag) => {
+                    {tags.map((current) => {
                       return(
                       <div className={styles.tagCont}>
-                        <Link className={styles.tag} to={`/tags/${tag}`}>
-                          #{tag}
+                        <Link className={current === tag ? styles.tagUpdating : styles.tag} to={`/tags/${current}`}>
+                          #{current}
                         </Link>
                       </div>
                       )

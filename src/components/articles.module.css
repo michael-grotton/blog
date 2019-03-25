@@ -51,12 +51,25 @@
   line-height:2rem;
 }
 
+.tag-updating {
+  @apply rounded block h-8 text-black font-sans text-xs;
+  background-color:#fff9d6;
+  box-shadow:none;
+  text-decoration:none;
+  text-align:center;
+  line-height:2rem;
+}
+
 .tag-cont {
   @apply w-1/2 pr-1 pb-1;
 }
 
 .tag:hover {
   background-color:#BDE9FF;
+}
+
+.tag-updating:hover {
+  background-color:#ffee90;
 }
 
 .tags {

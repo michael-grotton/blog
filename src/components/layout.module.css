@@ -1,0 +1,28 @@
+@tailwind preflight
+@tailwind components;
+@tailwind utilities;
+
+.footer {
+  @apply text-black font-sans font-light mb-10 mt-10;
+  bottom:0;
+}
+
+.cont {
+  height:100%;
+}
+
+.inner-cont {
+  height:100%;
+}
+
+.link {
+  box-shadow:none;
+  text-decoration:none;
+  padding-bottom:1px;
+}
+
+.link:hover {
+  box-shadow:none;
+  text-decoration:none;
+  color:#0000b3;
+}

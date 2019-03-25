@@ -7,8 +7,14 @@
   text-align:center;
 }
 
+.small-header {
+  @apply text-black font-sans font-light tracking-normal mt-0 mb-5 capitalize;
+  padding:2px;
+  border-bottom:solid 2px whitesmoke
+}
+
 .card {
-  @apply flex;
+  @apply flex m-0;
 }
 
 .info {
@@ -16,7 +22,7 @@
 }
 
 .name {
-  @apply font-sans font-light m-0 tracking-normal capitalize;
+  @apply font-sans font-light m-0 tracking-normal normal-case;
 }
 
 .buttons {
@@ -47,6 +53,10 @@
   border:2px solid #99ddff;
 }
 
+.place-holder {
+  @apply rounded h-10 mr-4 w-1/2 p-0 font-medium text-black font-sans text-xs;
+}
+
 .green:hover {
   background-color:#C0F0C0;
 }
@@ -56,5 +66,5 @@
 }
 
 .project {
-  @apply mb-10;
+  @apply mb-8 mt-0;
 }
