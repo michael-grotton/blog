@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import styles from "./blog-post.module.css"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
+        <h1 className={styles.title}>{post.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
@@ -23,10 +24,11 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
             marginTop: rhythm(-1),
           }}
+          className={styles.date}
         >
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className={styles.text} dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -42,17 +44,18 @@ class BlogPostTemplate extends React.Component {
             listStyle: `none`,
             padding: 0,
           }}
+          className={styles.text}
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link className={styles.link} to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link className={styles.link} to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}

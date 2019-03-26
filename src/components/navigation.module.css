@@ -26,7 +26,7 @@
 }
 
 .logo-font {
-  @apply font-semibold text-2xl tracking-tight text-black font-sans ml-2;
+  @apply hidden font-semibold text-2xl tracking-tight text-black font-sans ml-2;
   line-height:4.4rem;
   letter-spacing:.5px;
   -webkit-transition: line-height .1s linear;
@@ -36,7 +36,7 @@
 }
 
 .logo-font-scrolled {
-  @apply font-semibold text-2xl tracking-tight text-black font-sans ml-2;
+  @apply hidden font-semibold text-2xl tracking-tight text-black font-sans ml-2;
   line-height:3.9rem;
   letter-spacing:.5px;
   -webkit-transition: line-height .1s linear;
@@ -45,8 +45,32 @@
   transition: line-height .1s linear;
 }
 
+.logo-fontsm {
+  @apply font-semibold text-xl tracking-tight text-black font-sans ml-2;
+  line-height:4.4rem;
+  letter-spacing:.5px;
+  -webkit-transition: line-height .1s linear;
+  -moz-transition: line-height .1s linear;
+  -o-transition: line-height .1s linear;
+  transition: line-height .1s linear;
+}
+
+.logo-font-scrolledsm {
+  @apply font-semibold text-xl tracking-tight text-black font-sans ml-2;
+  line-height:3.9rem;
+  letter-spacing:.5px;
+  -webkit-transition: line-height .1s linear;
+  -moz-transition: line-height .1s linear;
+  -o-transition: line-height .1s linear;
+  transition: line-height .1s linear;
+}
+
+.pill-text {
+  @apply text-xs;
+}
+
 .pill {
-  @apply mr-2 align-bottom inline-block text-grey-dark font-sans rounded px-3;
+  @apply mr-1 align-bottom inline-block text-grey-dark font-sans rounded px-3;
   box-shadow: none;
   text-decoration: none;
   line-height:3.4rem;
@@ -57,7 +81,7 @@
 }
 
 .connect {
-  @apply mr-2 align-bottom inline-block font-medium font-sans text-black rounded px-3;
+  @apply mr-2 align-bottom inline-block font-medium text-xs font-sans text-black rounded px-1;
   box-shadow: none;
   text-decoration: none;
   line-height:3.4rem;
@@ -70,7 +94,7 @@
 }
 
 .connect-scrolled {
-  @apply mr-2 align-bottom inline-block font-medium text-black font-sans rounded px-3;
+  @apply mr-2 align-bottom inline-block font-medium text-xs text-black font-sans rounded px-1;
   box-shadow: none;
   text-decoration: none;
   line-height:3rem;
@@ -83,7 +107,7 @@
 }
 
 .pill-scrolled {
-  @apply mr-2 align-bottom inline-block text-grey-dark font-sans rounded px-3;
+  @apply mr-1 align-bottom inline-block text-grey-dark font-sans rounded px-3;
   box-shadow: none;
   text-decoration: none;
   line-height:3rem;
@@ -100,4 +124,37 @@
 .connect:hover, .connect-scrolled:hover {
   @apply font-sans;
   background-color:#ffee90;
+}
+
+.connecttextlg {
+  @apply hidden;
+}
+
+.connecttextsm {
+  @apply block;
+}
+
+@screen md {
+  .logo-font,.logo-font-scrolled {
+    display:block;
+  }
+  .logo-fontsm,.logo-font-scrolledsm {
+    display:none;
+  }
+  .pill-text {
+    @apply text-base
+  }
+  .pill,.pill-scrolled {
+    @apply mr-2;
+  }
+
+  .connect-scrolled,.connect {
+    @apply text-base px-3;
+  }
+  .connecttextsm {
+    @apply hidden;
+  }
+  .connecttextlg {
+    @apply block;
+  }
 }

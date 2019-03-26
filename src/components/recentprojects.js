@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import { rhythm } from "../utils/typography"
 
 
-function Projects() {
+function RecentProjects() {
     return (
       <div>
         <h2 className={styles.header}>Projects</h2>
@@ -44,4 +44,4 @@ function Projects() {
       </div>
       )
 }
-export default Projects;
+export default RecentProjects;
