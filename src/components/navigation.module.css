@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .nav-cont {
-  @apply bg-white pin-y fixed w-full;
+  @apply bg-white pin-y fixed w-full z-10;
   height:4.5rem;
   -webkit-transition: height .1s linear;
   -moz-transition: height .1s linear;
@@ -12,7 +12,7 @@
 }
 
 .nav-cont-scrolled {
-  @apply bg-white pin-y h-16 fixed w-full;
+  @apply bg-white pin-y h-16 fixed w-full z-10;
   -webkit-transition: height .1s linear;
   -moz-transition: height .1s linear;
   -o-transition: height .1s linear;
