@@ -2,17 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.footer {
-  @apply text-black font-sans font-light mb-10 mt-10;
-  bottom:0;
+.title {
+  @apply font-sans font-light;
 }
 
-.cont {
-  height:100%;
+.date {
+  @apply font-sans;
 }
 
-.inner-cont {
-  height:100%;
+.text {
+  @apply font-sans;
 }
 
 .link {
@@ -25,4 +24,8 @@
   box-shadow:none;
   text-decoration:none;
   color:#0066ff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  @apply font-sans font-normal normal-case tracking-normal;
 }

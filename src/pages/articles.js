@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import { rhythm } from "../utils/typography"
-import styles from "./articles.module.css"
+import styles from "../components/articles.module.css"
 
 class Articles extends React.Component {
   render() {

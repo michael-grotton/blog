@@ -37,15 +37,16 @@ class Navigation extends React.Component {
           <div>
             <Link to={'/'} style={{boxShadow:"none",textDecoration:"none"}}>
               <span className={this.state.scrolled ? styles.logoFontScrolled : styles.logoFont}>Michael Grotton</span>
+              <span className={this.state.scrolled ? styles.logoFontScrolledsm : styles.logoFontsm}>MG</span>
             </Link>
           </div>
           <div>
-              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/articles`}>Articles</Link>
-              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/projects`}>Projects</Link>
-              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/about`}>About Me</Link>
+              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/articles`}><span className={styles.pillText}>Articles</span></Link>
+              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/projects`}><span className={styles.pillText}>Projects</span></Link>
+              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/about`}><span className={styles.pillText}>About Me</span></Link>
           </div>
           <div>
-            <Link className = {this.state.scrolled ? styles.connectScrolled : styles.connect} to={`/connect`}>Get in touch</Link>
+            <Link className = {this.state.scrolled ? styles.connectScrolled : styles.connect} to={`/connect`}><span className={styles.connecttextlg}>Get in Touch</span><span className={styles.connecttextsm}>Connect</span></Link>
 
           </div>
         </div>

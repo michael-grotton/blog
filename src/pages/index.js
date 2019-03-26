@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Projects from "../components/projects"
+import RecentProjects from "../components/recentprojects"
 import RecentArticles from "../components/recentarticles"
 import Updated from "../components/updated"
 import Layout from "../components/layout"
@@ -23,7 +23,7 @@ class BlogIndex extends React.Component {
         <Bio />
         <RecentArticles />
         <Updated />
-        <Projects />
+        <RecentProjects />
       </Layout>
     )
   }
