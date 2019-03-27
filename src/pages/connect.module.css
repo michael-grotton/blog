@@ -4,6 +4,19 @@
 
 .text {
   @apply text-black font-sans;
+  text-align:center;
+}
+
+.form-cont {
+  @apply text-black font-sans flex-col flex items-center;
+}
+
+.element {
+  @apply flex flex-col w-full mb-2;
+}
+
+.messageElement {
+  @apply flex flex-col justify-center w-full mb-5;
 }
 
 .link {
@@ -16,4 +29,37 @@
   box-shadow:none;
   text-decoration:none;
   color:#0066ff;
+}
+
+.input {
+  @apply text-black text-sm appearance-none leading-tight rounded p-1;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.03);
+  background-color:#f0f0f5;
+  border:2px solid #f0f0f5;
+}
+
+.input:focus {
+  @apply outline-none bg-white border-blue;
+}
+
+.send {
+  @apply bg-blue-lighter rounded border-2 border-blue;
+}
+
+.send:hover {
+  @apply bg-blue-light rounded;
+  cursor: pointer;
+}
+
+.send:focus {
+  @apply shadow-outline outline-none;
+}
+
+@screen md {
+  .element {
+    @apply w-2/3;
+  }
+  .messageElement {
+    @apply w-2/3;
+  }
 }

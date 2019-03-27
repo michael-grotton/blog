@@ -10,11 +10,25 @@ class Connect extends React.Component {
   render() {
     return (
       <Layout>
-          <h3>Let's be internet friends!</h3>
-          <div className={styles.text}>
-            <p style={{margin:0,padding:0}}>Twitter: <a className={styles.link} href="http://twitter.com/michaelgrotton">@michaelgrotton</a></p>
-            <small>(I don't tweet very much)</small>
-          </div>
+          <h3 className={styles.text}>Let's be internet friends!</h3>
+          <form className={styles.formCont} name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+            <div className={styles.element}>
+              <label>Your Name: </label>
+              <input className={styles.input} type="text" name="name" />
+            </div>
+            <div className={styles.element}>
+              <label>Your Email: </label>
+              <input className={styles.input} type="email" name="email" />
+            </div>
+
+            <div className={styles.messageElement}>
+              <label>Message: </label>
+              <textarea style={{height:200}} className={styles.input} name="message"></textarea>
+            </div>
+            <div className={styles.element}>
+              <button className={styles.send} type="submit">Send</button>
+            </div>
+          </form>
       </Layout>
     )
   }
