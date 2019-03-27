@@ -13,11 +13,6 @@ class About extends React.Component {
           <div className={styles.text}>
             <p>to do</p>
           </div>
-          <div className={styles.test}>
-            ...
-            >>>
-            ~~~
-          </div>
       </Layout>
     )
   }

@@ -41,7 +41,7 @@ class Navigation extends React.Component {
             </Link>
           </div>
           <div>
-              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/articles`}><span className={styles.pillText}>Articles</span></Link>
+              <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/articles`}><span className={styles.pillText}>&nbsp;&nbsp;&nbsp;Blog&nbsp;&nbsp;&nbsp;</span></Link>
               <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/projects`}><span className={styles.pillText}>Projects</span></Link>
               <Link className = {this.state.scrolled ? styles.pillScrolled : styles.pill} to={`/about`}><span className={styles.pillText}>About Me</span></Link>
           </div>

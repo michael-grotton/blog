@@ -17,12 +17,12 @@ function RecentProjects() {
               <p className={styles.desc}>Node/Express web app that allows a spotify user to login and view their listening history.</p>
             </div>
             <div className={styles.buttons}>
-              <Link className={styles.green}>
+              <a href="https://github.com/michaelgrotton/spotify-music-profile" className={styles.green}>
                 Source
-              </Link>
-              <Link className={styles.blue}>
+              </a>
+              <a className={styles.blue}>
                 Demo
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -33,13 +33,14 @@ function RecentProjects() {
               <p className={styles.desc}>This site, built with Gatsby.js</p>
             </div>
             <div className={styles.buttons}>
-              <Link className={styles.green}>
-                Source
-              </Link>
+            <a href="https://github.com/michaelgrotton/blog" className={styles.green}>
+              Source
+            </a>
               <div className={styles.placeHolder}></div>
             </div>
           </div>
         </div>
+        <h4 className={styles.smallHeader}>Data Journalism / Visualization</h4>
         <h4 className={styles.smallHeader}>Other</h4>
       </div>
       )

@@ -12,7 +12,7 @@ function RecentArticles() {
          const posts = data.allMarkdownRemark.edges
          return (
           <div>
-            <h2 className={styles.header}>Recent Articles</h2>
+            <h2 className={styles.header}>Recent Blog Posts</h2>
             <div className={styles.posts}>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug

@@ -13,7 +13,7 @@ class Articles extends React.Component {
 
     return (
       <Layout>
-          <h2 className={styles.header}>All Articles</h2>
+          <h2 className={styles.header}>All Blog Posts</h2>
           <div className={styles.posts}>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug

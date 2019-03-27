@@ -80,5 +80,5 @@
 }
 
 .tags {
-  @apply flex flex-wrap w-auto content-start mt-0;
+  @apply flex flex-wrap w-auto content-end mt-0;
 }

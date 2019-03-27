@@ -12,7 +12,7 @@ function Updated() {
          const posts = data.allMarkdownRemark.edges
          return (
           <div>
-            <h2 className={styles.header}>Frequently Updated Articles</h2>
+            <h2 className={styles.header}>Frequently Updated Blog Posts</h2>
             <div className={styles.posts}>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug

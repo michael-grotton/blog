@@ -68,7 +68,6 @@
 .pill-text {
   @apply text-xs;
 }
-
 .pill {
   @apply mr-1 align-bottom inline-block text-grey-dark font-sans rounded px-3;
   box-shadow: none;

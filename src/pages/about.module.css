@@ -5,13 +5,3 @@
 .text {
   @apply text-black font-sans;
 }
-
-.test {
-  @apply bg-purple text-white;
-}
-
-@screen md {
-  .test {
-    @apply bg-green;
-  }
-}

@@ -1,0 +1,19 @@
+@tailwind preflight
+@tailwind components;
+@tailwind utilities;
+
+.text {
+  @apply text-black font-sans;
+}
+
+.link {
+  box-shadow:none;
+  text-decoration:none;
+  padding-bottom:1px;
+}
+
+.link:hover {
+  box-shadow:none;
+  text-decoration:none;
+  color:#0066ff;
+}
