@@ -1,7 +1,9 @@
 ---
-title: New Beginnings
+title: New Beginnings a very long article title
 date: "2015-05-28T22:40:32.169Z"
-tags: ["bread","updating"]
+tags: ["data-journalism","updated-often","pinned"]
+attachments:
+  - "./chicagoriver1897.jpg"
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

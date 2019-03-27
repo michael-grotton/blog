@@ -4,7 +4,7 @@ import {StaticQuery, graphql, Link } from "gatsby"
 
 import { rhythm } from "../utils/typography"
 
-function Updated() {
+function Pinned() {
     return (
       <StaticQuery
        query={pageQuery}
@@ -12,15 +12,16 @@ function Updated() {
          const posts = data.allMarkdownRemark.edges
          return (
           <div>
-            <h2 className={styles.header}>Frequently Updated Blog Posts</h2>
+            <h2 className={styles.header}>Pinned Blog Posts</h2>
             <div className={styles.posts}>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 const tags = node.frontmatter.tags
+                const headerURL = node.frontmatter.attachments[0].publicURL
                 return (
                 <Link className = {styles.link} style={{ boxShadow: `none`,margin:0}} to={node.fields.slug}>
                   <div className={styles.post} key={node.fields.slug}>
-                    <div class={styles.image}></div>
+                    <div class={styles.image} style={{backgroundImage:'url(' + headerURL + ')'}}></div>
                     <div class={styles.text}>
                       <h3 className={styles.title}
                         style={{
@@ -35,7 +36,7 @@ function Updated() {
                       {tags.map((tag) => {
                         return(
                         <div className={styles.tagCont}>
-                          <Link className={tag === "updating" ? styles.tagUpdating : styles.tag} to={`/tags/${tag}`}>
+                          <Link className={tag === "pinned" ? styles.tagUpdating : styles.tag} to={`/tags/${tag}`}>
                             #{tag}
                           </Link>
                         </div>
@@ -55,32 +56,32 @@ function Updated() {
   )
 }
 
-export default Updated
+export default Pinned
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
+query {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(
-      filter: { frontmatter: { tags: { in: "updating" } } },
-      sort: { fields: [frontmatter___date], order: DESC }, limit:3)
-      {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            tags
+  }
+  allMarkdownRemark(filter: { frontmatter: { tags: { in: ["pinned"] } } }, sort: { fields: [frontmatter___date], order: DESC }, limit:3) {
+    edges {
+      node {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          tags
+          attachments {
+            publicURL
           }
         }
       }
     }
   }
+}
 `

@@ -10,6 +10,7 @@ function RecentArticles() {
        query={pageQuery}
        render={data => {
          const posts = data.allMarkdownRemark.edges
+
          return (
           <div>
             <h2 className={styles.header}>Recent Blog Posts</h2>
@@ -17,10 +18,12 @@ function RecentArticles() {
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 const tags = node.frontmatter.tags
+                const headerURL = node.frontmatter.attachments[0].publicURL
+
                 return (
                 <Link className = {styles.link} style={{ boxShadow: `none`,margin:0}} to={node.fields.slug}>
                   <div className={styles.post} key={node.fields.slug}>
-                    <div class={styles.image}></div>
+                    <div class={styles.image} style={{backgroundImage:'url(' + headerURL + ')'}}></div>
                     <div class={styles.text}>
                       <h3 className={styles.title}
                         style={{
@@ -58,26 +61,29 @@ function RecentArticles() {
 export default RecentArticles
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
+query {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit:3) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            tags
+  }
+  allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit:3) {
+    edges {
+      node {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          tags
+          attachments {
+            publicURL
           }
         }
       }
     }
   }
+}
 `

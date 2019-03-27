@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import RecentProjects from "../components/recentprojects"
 import RecentArticles from "../components/recentarticles"
-import Updated from "../components/updated"
+import Pinned from "../components/pinned"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -22,7 +22,7 @@ class BlogIndex extends React.Component {
         />
         <Bio />
         <RecentArticles />
-        <Updated />
+        <Pinned />
         <RecentProjects />
       </Layout>
     )
